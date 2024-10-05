@@ -4,18 +4,23 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 
   @include lg {
-    background-color: rgb(247, 227, 210);
+    // background-color: rgb(247, 227, 210);
     max-width: 1280px;
   }
 
   @include md {
-    background-color: rgb(206, 210, 243);
+    // background-color: rgb(206, 210, 243);
     max-width: 768px;
   }
   @include sm {
-    background-color: rgb(244, 209, 209);
+    // background-color: rgb(244, 209, 209);
     max-width: 640;
+  }
+  .content {
+    flex: 1;
   }
 }
