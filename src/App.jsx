@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import ListPage from "./routes/listPage/ListPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SinglaPage from "./routes/singlePage/SinglaPage";
+import ProfilePage from "./routes/profilePage/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <SinglaPage />,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage />,
       },
     ],
   },
