@@ -57,9 +57,12 @@ nav {
     @include md {
       background-color: transparent;
     }
-
+    .link {
+      display: flex;
+      gap: 20px;
+    }
     a {
-      padding: 12px 24px;
+      padding: 10px 24px;
       margin: 20px;
     }
 
