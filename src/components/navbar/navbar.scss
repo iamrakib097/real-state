@@ -70,6 +70,24 @@ nav {
       display: flex;
       align-items: center;
       font-weight: bold;
+      .avatar-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin-right: 0px;
+        cursor: pointer;
+      }
+
+      // .avatar {
+      //   width: 40px;
+      //   height: 40px;
+      //   border-radius: 50%;
+      //   object-fit: cover;
+      //   margin-right: 20px; /* Ensures the image covers the area without distortion */
+      // }
 
       img {
         width: 40px;
@@ -116,6 +134,9 @@ nav {
 
     .register {
       background-color: #fece51;
+      @include sm {
+        display: none;
+      }
     }
 
     .menuIcon {

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import apiRequest from "../../lib/apiRequest";
 
 function Login() {
   const navigate = useNavigate();
@@ -19,10 +20,7 @@ function Login() {
   async function onSubmit(data) {
     const { username, password } = data;
     try {
-      const res = await axios.post(
-        "https://real-state-backend-aqxa.vercel.app/api/auth/login",
-        { username, password }
-      );
+      const res = await apiRequest.post("auth/login", { username, password });
       // console.log(res);
       toast.success("Login Susseccfully.");
       updateUser(res.data);

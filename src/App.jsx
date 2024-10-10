@@ -9,7 +9,7 @@ import ProfilePage from "./routes/profilePage/ProfilePage";
 import Login from "./routes/login/Login";
 import Register from "./routes/register/Register";
 import { AuthContextProvider } from "./context/AuthContext";
-
+import ProfileUpdatePage from "./routes/profileUpdatePage/ProfileUpdatePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <ProfilePage />,
+      },
+      {
+        path: "/profile/update",
+        element: <ProfileUpdatePage />,
       },
     ],
   },

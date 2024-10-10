@@ -26,7 +26,14 @@ const Navbar = () => {
       <div className="right">
         {currentUser ? (
           <div className="user">
-            <img src={currentUser.avatar || noavatar} alt="avatar" />
+            <Link to="/profile" className="avatar-link">
+              <img
+                src={currentUser.avatar || noavatar}
+                alt="avatar"
+                className="avatar"
+              />
+            </Link>
+
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
               <div className="notification">3</div>
@@ -44,13 +51,16 @@ const Navbar = () => {
         <div className="menuIcon">
           <img src={menu} alt="" onClick={handleClick} />
         </div>
-        <div className={showSidebar ? "menu active" : "menu"}>
+        <div
+          className={showSidebar ? "menu active" : "menu"}
+          onClick={handleClick}
+        >
           <a href="/">Home</a>
           <a href="/">About</a>
           <a href="/">Contact</a>
           <a href="/">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+          <Link to="/login">Sign in</Link>
+          <Link to="/register">Sign up</Link>
         </div>
       </div>
     </nav>
